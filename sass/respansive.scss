@@ -1,0 +1,280 @@
+@import 'mixin';
+@media screen and (max-width:1200px) {
+    // Top Bar
+    .top-bar {
+        .menu {
+            width: 55%;
+        }
+    }
+    .social-media {
+        display: none;
+    }
+    // Header
+    .header {
+        // left
+        .left {
+            width: 40%;
+            .text-main {
+                font-size: 50px;
+            }
+        }
+        // right
+        .right {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            .social-media {
+                height: 7%;
+                ul {
+                    width: 60%;
+                }
+            }
+            .image-header {
+                img {
+                    @include size( '', 110%, 0);
+                }
+            }
+        }
+    }
+    // About We
+    .about {
+        .about-we {
+            grid-template-columns: 50% 50%;
+            .left {
+                @include size( 85%, 500px, 10px);
+            }
+            .right {
+                .text-about {
+                    font-size: 30px;
+                }
+                .description {
+                    margin: 40px 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:992px) {
+    // Top Bar
+    .top-bar {
+        .menu {
+            width: 75%;
+            li {
+                font-size: 18px;
+            }
+        }
+    }
+    .header {
+        // left
+        .left {
+            width: 100%;
+            .text-main {
+                font-size: 55px;
+            }
+        }
+        // right
+        .right {
+            display: none;
+        }
+    }
+    // About We
+    .about {
+        .about-we {
+            grid-template-columns: 100% 100%;
+            grid-template-rows: repeat(2, 1fr);
+            .left {
+                @include size( 450px, 450px, 10px);
+                margin: auto;
+            }
+            .right {
+                margin-top: 80px;
+                grid-row: 2/3;
+            }
+        }
+    }
+    // Food Menu
+    .menu-foods {
+        // align-items: center;
+        padding: 25px;
+        .line-menu {
+            grid-template-columns: 12% 88%;
+            .text {
+                font-size: 30px;
+            }
+        }
+        .foods {
+            grid-gap: 40px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 280px);
+            .image {
+                width: 80%;
+            }
+            .wrapper {
+                display: inline;
+                align-self: center;
+                font-size: 18px;
+                p {
+                    font-weight: bold;
+                    display: inline;
+                    align-self: flex-start;
+                    text-align: center;
+                    padding: 0;
+                    padding-bottom: 7px;
+                    margin: 0;
+                    border: none;
+                    border-bottom: 2px solid white;
+                }
+                ul {
+                    li {
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+    // Section Call We
+    .section-call-we {
+        width: 100%;
+        .number-contact {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            p {
+                padding: 0;
+                margin-bottom: 22px;
+            }
+            .fixed-number {
+                border-right: none;
+            }
+        }
+    }
+    // Footer
+    .footer {
+        display: grid;
+        grid-template-rows: repeat(2, 100px);
+        grid-template-columns: repeat( 3, 1fr);
+        &-center {
+            grid-row: 2/3;
+            grid-column: 1/4;
+            p {
+                font-size: 17px;
+            }
+        }
+        &-right {
+            grid-column: 3/4;
+        }
+    }
+}
+
+@media screen and (max-width:578px) {
+    .liner-gradient-header {
+        width: 80%;
+        height: 70vh;
+        background-image: linear-gradient(to left bottom, #ffa00099 0%, #ff8c00 47%, #ff8c00cc 47%, #ff8c00cc 48.5%, #ff8c008c 48.5%, #ff8c008c 50%, transparent 50%, transparent 100%, );
+    }
+    // Main div
+    .container {
+        padding: 0 20px;
+    }
+    // Menu
+    .menu-close {
+        display: block;
+    }
+    .top-bar {
+        display: none;
+    }
+    .header {
+        height: 75vh;
+        // left
+        .left {
+            .text-main {
+                font-size: 50px;
+                margin-top: 30px;
+            }
+            .description {
+                font-size: 17px;
+                margin: 50px 0;
+            }
+            .btn {
+                display: flex;
+            }
+        }
+    }
+    // About We
+    .about {
+        .about-we {
+            grid-template-columns: 100% 100%;
+            grid-template-rows: repeat(2, 1fr);
+            .left {
+                @include size( 80%, 350px, 10px);
+            }
+            .right {
+                grid-row: 2/3;
+                .btn {
+                    display: flex;
+                }
+            }
+        }
+    }
+    // Food Menu
+    .menu-foods {
+        padding: 30px;
+        .line-menu {
+            grid-template-columns: 1fr;
+            text-align: center;
+            .line {
+                display: none;
+            }
+        }
+        .foods {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+            justify-items: center;
+            .image {
+                width: 220px;
+                height: 100%;
+                background-color: black;
+            }
+            .wrapper {
+                grid-template-columns: 1fr;
+                p {
+                    align-self: center;
+                }
+            }
+        }
+    }
+    // Section Call We
+    .section-call-we {
+        .title {
+            font-size: 30px;
+        }
+        padding: 40px 0;
+        .description {
+            text-align: justify;
+            line-height: 20px;
+        }
+        .number-contact {
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+    // Footer
+    .footer {
+        overflow: hidden;
+        &-left {
+            width: 165px;
+        }
+    }
+}
+
+@media screen and (max-width:370px) {
+    .footer {
+        &-center {
+            width: 76%;
+            margin: 0 auto;
+        }
+    }
+}

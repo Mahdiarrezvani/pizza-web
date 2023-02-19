@@ -1,0 +1,29 @@
+$btn-color:#ff6d0c;
+$color12:#121212;
+$color40:#404040;
+$colorE:#eee;
+$color7C:#7c7c7c;
+// $color5A:#5a4coe;
+@mixin size( $width:"", $height:"", $radius:"") {
+    border-radius: $radius;
+    width: $width;
+    height: $height;
+}
+
+@mixin button($bgColor:transparent) {
+    &:first-child {
+        background-color: $btn-color;
+        border: none;
+        color: $colorE;
+    }
+    font-family: 'Solitreo',
+    cursive;
+    font-size: 17px;
+    padding: 12px 0;
+    width: 130px;
+    background-color: $bgColor;
+    cursor: pointer;
+    margin-right: 15px;
+    border-radius: 7px;
+    text-transform: capitalize;
+}
