@@ -425,6 +425,7 @@ i {
 .section-staff .info-staff .staff .star {
   color: #ffd900;
   font-size: 30px;
+  margin: 12px 0 5px;
 }
 
 .section-staff .info-staff .staff .name-staff {

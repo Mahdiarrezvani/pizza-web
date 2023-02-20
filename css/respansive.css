@@ -198,7 +198,11 @@
     display: -ms-flexbox;
     display: flex;
   }
+  .about .title {
+    margin-top: 20px;
+  }
   .about .about-we {
+    margin: 0;
     -ms-grid-columns: 100% 100%;
         grid-template-columns: 100% 100%;
     -ms-grid-rows: (1fr)[2];
@@ -208,6 +212,9 @@
     border-radius: 10px;
     width: 80%;
     height: 350px;
+  }
+  .about .about-we .description {
+    text-align: justify;
   }
   .about .about-we .right {
     -ms-grid-row: 2;
@@ -277,6 +284,9 @@
   .footer-center {
     width: 76%;
     margin: 0 auto;
+  }
+  .about .right {
+    margin: 0;
   }
 }
 /*# sourceMappingURL=respansive.css.map */
